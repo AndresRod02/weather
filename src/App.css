@@ -28,7 +28,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: rgba(240, 248, 255, 0.668);
     transition: .4s;
     border-radius: 34px;
   }
