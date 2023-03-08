@@ -85,8 +85,8 @@ h2{
 .btn{
     position: absolute;
     z-index: 10;
-    bottom: -40%;
-    right: 30%;
+    bottom: -50%;
+    right: 34%;
     padding: 3%;
     box-shadow: 0px 4.85px 4.85px rgba(0, 0, 0, 0.34);
     border-radius: 10px;
@@ -101,11 +101,11 @@ h2{
     box-shadow: 3px 6.85px 9.85px rgba(0, 0, 0, 0.34);
 }
 .map{
-    position: fixed;
+    position: absolute;
     z-index: 9999;
-    bottom: 40%;
-    right: 2.5%;
-    padding: 1%;
+    bottom: -30%;
+    right: 42%;
+    padding: 3%;
     box-shadow: 0px 4.85px 4.85px rgba(0, 0, 0, 0.34);
     border-radius: 50%;
     background-color: rgba(240, 248, 255, 0.505);
