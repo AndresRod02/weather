@@ -35,7 +35,7 @@ div{
     overflow: visible;
     padding: 2vh;
     border-top-right-radius: 100px;
-    width: 100%;
+    width: 105%;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -44,7 +44,7 @@ div{
 .img{
     position: absolute;
     top: -15%;
-    right: 0%;
+    right: -10%;
     width: 55%;
     object-fit:contain; 
     z-index: 10;
@@ -103,7 +103,7 @@ h2{
 .map{
     position: fixed;
     z-index: 9999;
-    bottom: 17%;
+    bottom: 40%;
     right: 2.5%;
     padding: 1%;
     box-shadow: 0px 4.85px 4.85px rgba(0, 0, 0, 0.34);
@@ -170,9 +170,6 @@ h2{
       left: 2.5%;
       font-size: 200%;
      }
-     .map{
-        bottom: 13%;
-      }
   }
   @media screen and (min-width: 576px) {
     .switchContainer {
@@ -197,9 +194,6 @@ h2{
         color: #f5f5f5;
         display: inline-block;
        }
-       .map{
-        bottom: 13%;
-      }
   }
   
   /* Tablets */
@@ -225,9 +219,6 @@ h2{
         width: 28%;
         border-radius: 10px;
        }
-    .map{
-        bottom: 16.5%;
-    }
     .switchContainer {
         position: fixed;
         top: 6%;
