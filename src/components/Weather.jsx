@@ -8,8 +8,6 @@ const Weather = () => {
     const [openWeather, setOpenWeather] = useState({})
     const [farenheit, setFarenheit] = useState(true)
     const [city, setCity] = useState('Bogota')
-    const iconCode = openWeather.weather?.[0].icon;
-    const iconUrl = iconCode ? `http://openweathermap.org/img/w/${iconCode}.png`: ''
     //Busqueda
     const change = (event) =>{
      setCity(event.target.value)
@@ -56,7 +54,7 @@ const Weather = () => {
             </div>
           )}
           <input type="text" onChange={change} className='query' placeholder={'  Busca una ciudad'}/>
-          <img src={iconUrl} alt="" className='img'/> 
+          <img src={`http://openweathermap.org/img/w/${openWeather.weather?.[0].icon}.png`} alt="" className='img'/> 
         </div>
       );
     };
