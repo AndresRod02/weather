@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BoxIconElement } from 'boxicons';
 const Weather = () => {
     const [latitude, setLatitude] = useState(34)
     const [longitude, setLongitude] = useState(-118)
