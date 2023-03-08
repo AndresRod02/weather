@@ -32,7 +32,6 @@ div{
     clip-path: polygon(0 0, 0 200%, 500% 100%);
     border-radius: 10px;
     display: inline-block;
-    overflow: visible;
     padding: 2vh;
     border-top-right-radius: 100px;
     width: 100%;
@@ -43,8 +42,8 @@ div{
 }
 .img{
     position: absolute;
-    top: -15%;
-    right: -10%;
+    top: -22%;
+    right: 0%;
     width: 55%;
     object-fit:contain; 
     z-index: 10;
@@ -67,7 +66,7 @@ span{
     font-weight: 300;
 }
 .title{
-    position: absolute;
+    position: fixed;
     top: 11%;
     left: 10%;
     font-size: 15%;
@@ -162,10 +161,10 @@ h2{
       right: 10%;
       height: 25px;
       width: 80%;
-      border-radius: 10px;
+      border-radius: 5px;
      }
      .title{
-      position: absolute;
+      position: fixed;
       top: 5%;
       left: 10%;
       font-size: 180%;
@@ -184,10 +183,10 @@ h2{
         right: 25%;
         height: 25px;
         width: 50%;
-        border-radius: 10px;
+        border-radius: 5px;
        }
        .title{
-        position: absolute;
+        position: fixed;
         top: 5%;
         left: 20%;
         font-size: 200%;
@@ -205,7 +204,7 @@ h2{
         right: 30%;
         height: 25px;
         width: 40%;
-        border-radius: 10px;
+        border-radius: 5px;
        }
        .switchContainer {
         position: fixed;
@@ -213,7 +212,7 @@ h2{
         right: 25%;
       }
       .title{
-        position: absolute;
+        position: fixed;
         top: 5%;
         left: 27%;
         font-size: 200%;
@@ -230,7 +229,7 @@ h2{
         right: 35%;
         height: 25px;
         width: 28%;
-        border-radius: 10px;
+        border-radius: 5px;
        }
        .switchContainer {
         position: fixed;
@@ -238,9 +237,9 @@ h2{
         right: 5%;
       }
       .title{
-        position: absolute;
+        position: fixed;
         top: 5%;
-        left: 5%;
+        left: 8%;
         font-size: 200%;
         color: #f5f5f5;
         display: inline-block;
