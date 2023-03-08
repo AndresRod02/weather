@@ -157,6 +157,7 @@ h2{
     }
     .query{
       position: fixed;
+      background-color: #ffffff65;
       top: 18%;
       right: 2.5%;
       height: 5%;
@@ -181,6 +182,7 @@ h2{
       }
       .query{
         position: fixed;
+        background-color: #ffffff65;
         top: 15%;
         right: 25%;
         height: 5%;
@@ -204,6 +206,7 @@ h2{
   @media screen and (min-width: 768px) {
     .query{
         position: fixed;
+        background-color: #ffffff65;
         top: 15%;
         right: 30%;
         height: 5%;
@@ -225,4 +228,8 @@ h2{
     .map{
         bottom: 16.5%;
     }
+    .switchContainer {
+        position: fixed;
+        top: 7%;
+      }
   }
