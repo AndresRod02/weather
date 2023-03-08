@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BoxIconElement } from 'boxicons';
+import Swal from 'sweetalert2'
 const Weather = () => {
     const [latitude, setLatitude] = useState(34)
     const [longitude, setLongitude] = useState(-118)
@@ -32,11 +33,11 @@ const Weather = () => {
          })
          .catch((error)=> console.error(error))
      }, [latitude, longitude])
-     const update = ()=>{
-      navigator.geolocation.getCurrentPosition((position)=>{
-        setLatitude(position.coords.latitude)
-        setLongitude(position.coords.longitude)
-      })
+     const update = ()=>{      
+       navigator.geolocation.getCurrentPosition((position)=>{
+         setLatitude(position.coords.latitude)
+         setLongitude(position.coords.longitude)
+        })
      }
      return (
         <div>
