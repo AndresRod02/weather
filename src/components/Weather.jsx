@@ -59,8 +59,6 @@ const Weather = () => {
       "50d": '/9.svg',
       "50n": '/9.svg'
      }
-    const icon = ArrayIcon[openWeather.weather?.[0].icon] ? ArrayIcon[openWeather.weather?.[0].icon] : `https://openweathermap.org/img/wn/${openWeather.weather?.[0].icon}.png`
-
     return (
         <div>
           {openWeather.main && (
@@ -77,7 +75,7 @@ const Weather = () => {
             </div>
           )}
           <input type="text" onChange={change} className='query' placeholder={'  Busca una ciudad'}/>
-          <img src={icon} alt="" className='img'/> 
+          <img src={ArrayIcon[openWeather.weather?.[0].icon]} className='img'/> 
         </div>
       );
     };
