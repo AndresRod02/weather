@@ -39,7 +39,29 @@ const Weather = () => {
          setLongitude(position.coords.longitude)
         })
      }
-     return (
+     const ArrayIcon = {
+      "01d": '/1.svg',
+      "01n": '/10.svg',
+      "02d": '/2.svg',
+      "02n": '/11.svg',
+      "03d": '/3.svg',
+      "03n": '/3.svg',
+      "04d": '/4.svg',
+      "04n": '/4.svg',
+      "09d": '/5.svg',
+      "09n": '/5.svg',
+      "10d": '/6.svg',
+      "10n": '/6.svg',
+      "11d": '/7.svg',
+      "11n": '/7.svg',
+      "13d": '/8.svg',
+      "13n": '/8.svg',
+      "50d": '/9.svg',
+      "50n": '/9.svg'
+     }
+    const icon = ArrayIcon[openWeather.weather?.[0].icon] ? ArrayIcon[openWeather.weather?.[0].icon] : `https://openweathermap.org/img/wn/${openWeather.weather?.[0].icon}.png`
+
+    return (
         <div>
           {openWeather.main && (
             <div className='card'>
@@ -55,7 +77,7 @@ const Weather = () => {
             </div>
           )}
           <input type="text" onChange={change} className='query' placeholder={'  Busca una ciudad'}/>
-          <img src={`http://openweathermap.org/img/w/${openWeather.weather?.[0].icon}.png`} alt="" className='img'/> 
+          <img src={icon} alt="" className='img'/> 
         </div>
       );
     };
