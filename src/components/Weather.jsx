@@ -26,13 +26,14 @@ const Weather = () => {
         navigator.geolocation.getCurrentPosition((position)=>{
             setLatitude(position.coords.latitude)
             setLongitude(position.coords.longitude)
+            setIsLoading(false)
         })
     }, [])
      useEffect(()=>{
          axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=9f2f11a0a655ce45b92f075f66dc6510`)
          .then((result)=>{
             setOpenWeather(result.data)
-            setIsLoading(false)
+            
          })
          .catch((error)=> console.error(error))
      }, [latitude, longitude])
