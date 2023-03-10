@@ -75,7 +75,7 @@ const Weather = () => {
               <h3>HUMIDITY <span>{openWeather.main.humidity}%</span></h3>
               <h2>{openWeather.name}, {openWeather.sys.country}</h2>
               <h3 className='description'>{openWeather.weather[0].description.toUpperCase()}</h3>
-              <button onClick={()=>{setFarenheit(!farenheit)}} className='btn'>Cambiar a F°</button>
+              <button onClick={()=>{setFarenheit(!farenheit)}} className='btn'>Change to F°</button>
               <button onClick={update} className='map'><box-icon type='solid' name='map'></box-icon></button>
             </div>
           )}
