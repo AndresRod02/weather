@@ -1,19 +1,21 @@
 import './App.css'
 import Weather from './components/Weather'
-import { load } from './components/load'
 import DarkTheme from './components/DarkTheme'
+import { useState, useEffect } from 'react'
 function App() {
 
+useEffect(()=>{
+  if(Weather === true){
+    setIsLoading(false)
+  }
+}, [])
   return (
     
     <div className="App">
-      {window.addEventListener('load', function () {
-      load()
-      })}
+      <Weather/>
       <div className='switchContainer'>
       <DarkTheme/>
       </div>
-      <Weather/>
     </div>
   )
 }

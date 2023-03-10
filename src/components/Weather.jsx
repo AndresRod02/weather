@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BoxIconElement } from 'boxicons';
 import Swal from 'sweetalert2'
+import Load from './load';
 const Weather = () => {
     const [latitude, setLatitude] = useState(34)
     const [longitude, setLongitude] = useState(-118)
     const [openWeather, setOpenWeather] = useState({})
     const [farenheit, setFarenheit] = useState(true)
     const [city, setCity] = useState('Bogota')
+    const [isLoading, setIsLoading] = useState(true)
     //Busqueda
     const change = (event) =>{
      setCity(event.target.value)
@@ -30,6 +32,7 @@ const Weather = () => {
          axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=9f2f11a0a655ce45b92f075f66dc6510`)
          .then((result)=>{
             setOpenWeather(result.data)
+            setIsLoading(false)
          })
          .catch((error)=> console.error(error))
      }, [latitude, longitude])
@@ -61,6 +64,7 @@ const Weather = () => {
      }
     return (
         <div>
+          {isLoading && <Load></Load>}
           {openWeather.main && (
             <div className='card'>
               <h1>{farenheit ? Math.floor(openWeather.main.temp-273.15) :Math.floor((openWeather.main.temp-273.15)*9/5 + 32) }{farenheit ? "°C" : "°F"}</h1>
